@@ -3,13 +3,12 @@
 Even = []
 Odd = []
 with open("integers.txt", "r") as file:
-    print(file.read())
-
     for line in file:
-        if file.read %2 == 0:
-            Even.append(line)
-        elif file.read %2 != 0:
-            Odd.append(line)
+        numbers = int(line)
+        if numbers % 2 == 0:
+            Even.append(numbers)
+        else:
+            Odd.append(numbers)
 
 print(Even)
 print(Odd)
