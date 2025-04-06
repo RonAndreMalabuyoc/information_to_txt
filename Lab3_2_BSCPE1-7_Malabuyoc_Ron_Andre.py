@@ -10,5 +10,9 @@ with open("integers.txt", "r") as file:
         else:
             Odd.append(numbers)
 
-print(Even)
-print(Odd)
+with open ("even.txt", "w") as even:
+    for num in Even:
+        even.write(str(num ** 2) + "\n")
+with open ("odd.txt", "w") as odd:
+    for num in Odd:
+        odd.write(str(num ** 3) + "\n")
